@@ -12,7 +12,6 @@ URL:		http://www.balabit.com/products/syslog_ng/
 Source:     http://www.balabit.com/downloads/syslog-ng/2.0/src/%{name}-%{version}.tar.bz2
 License:	GPL
 Group:		System/Libraries
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The EventLog library aims to be a replacement of the simple syslog() API
