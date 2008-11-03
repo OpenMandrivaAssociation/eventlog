@@ -1,6 +1,6 @@
 %define	name	eventlog
-%define	version	0.2.5
-%define	release	%mkrel 4
+%define	version	0.2.7
+%define	release	%mkrel 1
 %define major	0
 %define libname	%mklibname %{name} %{major}
 
@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 Summary:	Replacement for syslog API
 URL:		http://www.balabit.com/products/syslog_ng/
-Source:     http://www.balabit.com/downloads/syslog-ng/2.0/src/%{name}-%{version}.tar.bz2
+Source:     http://www.balabit.com/downloads/files/syslog-ng/sources/stable/src/%{name}-%{version}.tar.gz
 License:	GPL
 Group:		System/Libraries
 BuildRoot:	%{_tmppath}/%{name}-%{version}
