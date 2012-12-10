@@ -1,18 +1,14 @@
-%define	name	eventlog
-%define	version	0.2.12
-%define	release	%mkrel 1
 %define major	0
 %define libname	%mklibname %{name} %{major}
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		eventlog
+Version:	0.2.12
+Release:	2
 Summary:	Replacement for syslog API
 License:	GPL
 Group:		System/Libraries
 URL:		http://www.balabit.com/products/syslog_ng/
 Source:     http://www.balabit.com/downloads/files/eventlog/0.2/%{name}_%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The EventLog library aims to be a replacement of the simple syslog() API
@@ -28,7 +24,6 @@ via a configuration file.
 
 %package -n	%{libname}
 Group:		Development/Other
-License:	GPL
 Summary:	Replacement for syslog API
 
 %description -n	%{libname}
@@ -45,7 +40,6 @@ via a configuration file.
 
 %package -n	%{libname}-devel
 Group:		Development/Other
-License:	GPL
 Summary:	Replacement for syslog API
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
@@ -70,31 +64,14 @@ via a configuration file.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall
 
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
 %files -n %{libname}
-%defattr(-,root,root)
-%doc README AUTHORS ChangeLog COPYING CREDITS NEWS PORTS VERSION
 %{_libdir}/libevtlog*so.*
 
 %files -n %{libname}-devel
-%defattr (-,root,root)
 %{_includedir}/eventlog
 %{_libdir}/libevtlog.a
-%{_libdir}/libevtlog.la
 %{_libdir}/libevtlog.so
 %{_libdir}/pkgconfig/eventlog.pc
-
 
