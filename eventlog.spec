@@ -3,7 +3,7 @@
 
 Name:		eventlog
 Version:	0.2.12
-Release:	2
+Release:	3
 Summary:	Replacement for syslog API
 License:	GPL
 Group:		System/Libraries
