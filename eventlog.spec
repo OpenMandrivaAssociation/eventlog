@@ -7,7 +7,7 @@ Release:	3
 Summary:	Replacement for syslog API
 License:	GPL
 Group:		System/Libraries
-URL:		http://www.balabit.com/products/syslog_ng/
+URL:		https://www.balabit.com/products/syslog_ng/
 Source:     http://www.balabit.com/downloads/files/eventlog/0.2/%{name}_%{version}.tar.gz
 
 %description
