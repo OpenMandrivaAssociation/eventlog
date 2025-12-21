@@ -10,6 +10,11 @@ Group:		System/Libraries
 URL:		https://www.balabit.com/products/syslog_ng/
 Source:     http://www.balabit.com/downloads/files/eventlog/0.2/%{name}_%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 The EventLog library aims to be a replacement of the simple syslog() API
 provided on UNIX systems. The major difference between EventLog and syslog
